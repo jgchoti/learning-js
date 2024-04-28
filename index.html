@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS playground</title>
+  </head>
+  <body>
+    <!-- Button to activate different scripts -->
+    <h2>Devtools-Debugger</h2>
+
+    <h3>isolate</h3>
+    <button onclick="activateJs('js-isolate/greeting.js')">Greeting</button>
+    <button onclick="activateJs('js-isolate/five-characters.js')">
+      Five Characters
+    </button>
+    <button onclick="activateJs('js-isolate/input-something.js')">
+      Input something
+    </button>
+    <button onclick="activateJs('js-isolate/ten-characters.js')">
+      Input something
+    </button>
+    <button onclick="activateJs('js-isolate/doubled-characters.js')">
+      Doubled Characters
+    </button>
+    <button onclick="activateJs('js-isolate/reverse.js')">Reverse</button>
+    <h3>integrate</h3>
+    <div>
+      <form
+        id="user-info"
+        onsubmit="return submitForm('js-integrate/hello.js', 'greeting-output')"
+      >
+        <label>your first name: <input id="first-name" type="text" /> </label>
+        <label>your last name: <input id="last-name" type="text" /> </label>
+        <button type="submit">Submit</button>
+      </form>
+      <hr />
+      <pre id="greeting-output" class="computery"></pre>
+      <hr />
+    </div>
+    <div>
+      <form
+        id="twice-data"
+        onsubmit="return submitForm('js-integrate/twice.js', 'doubled-input')"
+      >
+        <label> double this: <input id="to-double" type="text" /> </label>
+        <button type="submit">Submit</button>
+      </form>
+      <hr />
+      <pre id="doubled-input" class="computery"></pre>
+    </div>
+    <hr />
+    <div>
+      <form
+        id="sleep-info"
+        onsubmit="return submitForm('js-integrate/time-management.js', 'advice-area')"
+      >
+        <label><input id="tired" type="checkbox" /> Are you tired?</label>
+        <br />
+        <label
+          ><input id="free-time" type="checkbox" /> Do you have 20
+          minutes?</label
+        >
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      <hr />
+      <pre id="advice-area" class="computery"></pre>
+    </div>
+    <hr />
+    <div>
+      <form
+        id="search-input"
+        onsubmit="return submitForm('js-integrate/search.js', 'search-result')"
+      >
+        <label>Does <input id="text" type="text" /></label>
+        <label>include <input id="query" type="text" /></label>
+        ?
+        <br />
+
+        <label>case-sensitive: <input id="sensitive" type="checkbox" /></label>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      <hr />
+      <pre id="search-result" class="computery"></pre>
+    </div>
+    <hr />
+    <div>
+      <form
+        id="reversify"
+        onsubmit="return submitForm('js-integrate/reverse.js', 'reverse-output')"
+      >
+        <label>reverse this: <input id="to-reverse" type="text" /></label>
+        <br />
+        <label><input id="loud" type="checkbox" /> upper case</label>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      <hr />
+      <pre id="reverse-output" class="computery"></pre>
+    </div>
+    <hr />
+    <div>
+      <form
+        id="mirror-input"
+        onsubmit="return submitForm('js-integrate/mirror.js', 'mirror-output')"
+      >
+        <label>mirror this text: <input id="to-mirror" type="text" /> </label>
+        <label>Middle character: <input id="middle-char" type="text" /></label>
+        <br />
+        <label><input id="uppercase" type="checkbox" /> upper case</label>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      <hr />
+      <pre id="mirror-output" class="computery"></pre>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
